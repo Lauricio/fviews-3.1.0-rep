@@ -1,0 +1,21 @@
+<head>
+  <title>fviews-3.1.0</title>
+</head>
+
+<body>
+  {{> layout}}
+</body>
+
+<template name="layout">
+  {{#SequentialLayout direction="X" target="content" class="blue-bg"}}
+    {{#famousEach myItems}}
+      {{>Surface template="item" size="[undefined, true]"}}
+    {{/famousEach}}
+  {{/SequentialLayout}}
+</template>
+
+<template name="item">
+  <div class="item">
+    Item: {{this}}
+  </div>
+</template>
